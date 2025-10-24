@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.welcome-page-title-wrap {
+    background-color: var(--light-blue-color);
+    border-radius: 15px;
+
+    margin-top: 15px;
+}
+
+.welcome-title {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 75px;
+    font-weight: 200;
+    color: var(--white-color);
+
+    text-align: center;
+}
+
+.welcome-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 35px;
+
+    text-align: center;
+}

@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --white-color: #FFF;
+    --gray-color: #BDBDBD;
+    --light-gray-color: #c4c4c479;
+    --black-color: #333333; 
+    --light-blue-color: #7BC8F6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--white-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div,
+a,
+button {
+    transition: 0.3s;
+}
+
+a {
+    color: var(--gray-color);
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    position: relative;
+
+    font-weight: 900;
+    font-size: 16px;
+
+    border-radius: 50%;
+
+    color: var(--white-color);
+    background-color: rgba(207, 207, 207, 0.27);
+    outline: 1px solid rgba(207, 207, 207, 0.5);
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+.btn svg {
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.container {
+    box-sizing: border-box;
+
+    width: calc(100% - 150px);
+    margin: 0 auto;
+}
+
+/* CONTENT ON WEBSITE */
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    position: relative;
+    width: 280px;
+    margin: 15px;
+    border-radius: 15px;
+    background: var(--light-blue-color);
+    height: calc(100vh - 32px);
+    transition: all 0.4s ease;
+}
+
+.sidebar-header {
+    padding: 25px 20px;
+}
+
+.sidebar-title {
+    font-family: 'Pacifico', sans-serif;
+    font-weight: 200;
+    font-size: 45px;
+}
+
+.sidebar-bottom-wrap {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sidebar-bottom-btn {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--white-color);
+
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+
+    position: relative;
+    bottom: 15px;
+
+
+    transition: .3s;
+}
+
+.sidebar-bottom-btn:hover {
+    background-color: var(--white-color);
+    color: var(--light-blue-color);
+
+    font-size: 25px;
+
+
+}
+
+.nav-item {
+    position: relative;
+    
+    border-radius: 15px;
+
+    padding: 25px 30px;
+
+    transition: .3s ease;
+}
+
+.nav-item:hover {
+    background-color: var(--white-color);
+}
+
+.nav-item:hover .nav-link {
+    color: var(--light-blue-color);
+    font-size: 23px;
+}
+
+.nav-item:hover .nav-icon {
+    top: 24px;
+}
+
+.nav-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: var(--white-color);
+    
+}
+
+.nav-icon {
+    position: absolute;
+    top: 25px;
+
+    transition: top .2s ease;
+}
+
+.nav-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-label {
+    padding: 35px;
+}
+
+/* MAIN CONTENT */
+
+.content {
+    height: calc(100vh - 32px);
+    width: 100%;
+
+    background-color: var(--light-gray-color);
+
+    margin-right: 15px;
+
+    border-radius: 15px;
+
+    overflow-y: scroll;
+}
+
+/* CARD */
+
+.cards-container {
+   box-sizing: border-box;
+
+    width: calc(100% - 150px);
+    margin: 0 auto;
+}
+
+.cards-container-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Pattern */
+
+.card-pattern {
+    width: 300px;
+    height: 450px;
+
+    background-image: url('https://elena-plenkina.ru/wp-content/uploads/2025/01/mihail1-scaled.jpeg');
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    
+    border-radius: 15px;
+
+    position: relative;
+
+    margin-top: 15px;
+    padding: 5px 15px 15px 15px; 
+
+    text-align: center;
+}
+
+.card-pattern:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.card-pattern:hover .card-pattern-title{
+    min-height: 100%;
+
+    font-size: 24px;
+}
+
+.card-pattern:hover .card-pattern-link {
+    opacity: 1;
+}
+
+.card-pattern-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    overflow: hidden;
+    word-wrap: break-word; 
+    white-space: normal; 
+    
+
+    backdrop-filter: blur(5px);
+    
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    min-height: 50px;
+
+    z-index: 10;
+
+    border-radius: 15px;
+    
+    transition: min-height .3s ease;
+
+    mix-blend-mode:exclusion
+}
+
+.card-pattern-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: var(--white-color);
+
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    z-index: 50;
+
+    opacity: 0;
+}
+
+/* MODAL STYLES */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal-content input {
+    padding: 10px;
+    border: 1px solid var(--gray-color);
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-confirm, .btn-cancel {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-confirm {
+    background-color: var(--light-blue-color);
+    color: var(--white-color);
+}
+
+.btn-cancel {
+    background-color: var(--gray-color);
+    color: var(--white-color);
+}
+
+.btn-confirm:hover, .btn-cancel:hover {
+    opacity: 0.8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+    z-index: 100;
+}
+
+.delete-btn:hover {
+    background: rgba(255,0,0,0.7);
+}
+
+/* TAG CHIPS */
+.tag-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    z-index: 20;
+
+    position: absolute;
+    top: 1px;
+    width: calc(100% - 25px);
+}
+
+.card-pattern:hover .tag-list {
+    top: 150px;
+}
+
+.tag {
+    background: var(--black-color);
+    opacity: 0.7;
+    color: var(--white-color);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(2px);
+}
+
+/* Search modal: inherit styles from .modal .modal-content already defined earlier */
+/* Small layout tweak for search modal input */
+#searchModal .modal-content {
+    width: 380px;
+}
+
+/* ShowAll button style */
+#btnShowAll {
+    margin-top: 8px;
+    background: var(--light-blue-color);
+    color: var(--white-color);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}

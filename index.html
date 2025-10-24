@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="img/favicon.ico"type="image/x-icon" />
+    <link rel="stylesheet" href="general-styles.css" />
+    <link rel="stylesheet" href="welcome-page.css" />
+    <title>Patterny</title>
+</head>
+<body>
+<main class="main">
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <h3 class="sidebar-title">Patterny</h3>
+        </header>
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link link-patterns">
+                        <span class="nav-icon">
+                            <!-- icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="currentColor" d="M10.5 4h-2C7.67 4 7 3.33 7 2.5v-2c0-.28-.22-.5-.5-.5H2c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V4.5c0-.28-.22-.5-.5-.5m-6 6h-1c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h1c.28 0 .5.22.5.5s-.22.5-.5.5m0-2h-1c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h1c.28 0 .5.22.5.5s-.22.5-.5.5m0-2h-1c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h1c.28 0 .5.22.5.5s-.22.5-.5.5m4 4h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h2c.28 0 .5.22.5.5s-.22.5-.5.5m0-2h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h2c.28 0 .5.22.5.5s-.22.5-.5.5m0-2h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h2c.28 0 .5.22.5.5s-.22.5-.5.5M8 .5V2c0 .55.45 1 1 1h1.5c.45 0 .67-.54.35-.85l-2-2C8.54-.17 8 .06 8 .5"/></svg>
+                        </span>
+                        <span class="nav-label">Выкройки</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-bottom-wrap">
+                <button class="sidebar-bottom-btn" id="btnAdd">Добавить</button>
+                <button class="sidebar-bottom-btn" id="btnSearch" style="margin-top:8px;">Поиск</button>
+            </div>
+        </nav>
+    </aside>
+
+    <div class="content" id="contentArea">
+        <section class="content-section">
+            <div class="container">
+                <div class="welcome-page-title-wrap">
+                    <h3 class="welcome-title">Patterny</h3>
+                    <h5 class="welcome-subtitle">ваш помощник по шитью</h5>
+                </div>
+
+                <div class="cards-container">
+                    <div class="cards-container-wrap">
+                        <!-- карточки рендерятся динамически -->
+                    </div>
+                </div>
+
+                <div style="margin-top: 12px;">
+                    <button id="btnShowAll" class="btn" title="Показать все выкройки" style="border-radius:8px; width:auto; height:auto; padding:8px 12px; font-size:14px; display:none;">
+                        Показать всё
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Modal Add -->
+<div class="modal" id="addPatternModal">
+    <div class="modal-content">
+        <h3>Добавить выкройку</h3>
+        <form id="addPatternForm">
+            <label>Ссылка на изображение:</label>
+            <input type="text" id="patternImage" placeholder="https://example.com/image.jpg">
+
+            <label>Название выкройки:</label>
+            <input type="text" id="patternName" placeholder="Название" required>
+
+            <label>Ссылка на выкройку:</label>
+            <input type="text" id="patternLink" placeholder="https://example.com/pattern.pdf" required>
+
+            <label>Теги (через запятую и пробел):</label>
+            <input type="text" id="patternTags" placeholder="спорт, худи, мужское">
+
+            <div class="modal-buttons">
+                <button type="submit" class="btn-confirm">Добавить</button>
+                <button type="button" class="btn-cancel">Отмена</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Search -->
+<div class="modal" id="searchModal">
+    <div class="modal-content">
+        <h3>Поиск по тегам</h3>
+        <form id="searchForm">
+            <label>Введите тег:</label>
+            <input type="text" id="searchInput" placeholder="напр., худи" required>
+            <div class="modal-buttons">
+                <button type="submit" class="btn-confirm">Поиск</button>
+                <button type="button" class="btn-cancel" id="searchCancel">Отмена</button>
+            </div>
+        </form>
+        <small>Поиск частичный и регистронезависимый. Можно вводить часть слова.</small>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="indexdb.js"></script>
+<script src="modal.js"></script>
+<script src="patterns.js"></script>
+<script src="search.js"></script>
+<script src="sidebarSections.js"></script>
+</body>
+</html>
